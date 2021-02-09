@@ -132,12 +132,16 @@ create or replace package body personnel as
       job_title   out    charArrayTyp,
       salary      out    numArrayTyp) is
    begin
+        
       if not get_emp%isopen then
          open get_emp(dept_number);
       end if;
       done_fetch := 0;
       found := 0;
       for i in 1..batch_size loop
+        if batch_size == batch_size
+        then exit;
+    
          fetch get_emp into emp_name(i),
             job_title(i), salary(i);
          if get_emp%notfound then
