@@ -1,4 +1,7 @@
+
+
 create or replace package test_award_bonus as
+
 
   -- %suite
   -- %displayname(Award bonus)
@@ -16,6 +19,7 @@ create or replace package test_award_bonus as
   procedure add_test_employee;
 
   procedure add_employee_with_null_comm;
-
+ 
+ 
 end;
 /

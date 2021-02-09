@@ -1,3 +1,5 @@
+
+
 create table employees_test (employee_id number primary key, commission_pct number, salary number);
 insert into employees_test values (1001, 0.2, 8400);
 insert into employees_test values (1002, 0.25, 6000);
